@@ -91,9 +91,39 @@
                     <p class="login-box-msg">Sign up for SGA!</p>
                     <form action="confirm.php" method="post">
                         <div class="form-group">
+                        	<label for="preferedName">Prefered name:</label>
+                        	<input id="preferedName" type="text" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label for="mail"> UMBC E-mail:</label>
                             <input type="email" class="form-control" id="mail" name="mail" value="<?php echo $_SERVER['mail'];?>" readonly>
                         </div>
+                        <div class="form-group" >
+							<label for="bio">Bio:</label>
+							<textarea id="bio" class="form-control" name="bio"></textarea>
+						</div>
+						<div class="form-group" >
+							<label for="major">Major:</label>
+							<input type="text" id="major" class="form-control" name="major">
+						</div>
+						<div class="form-group" ng-class="{'has-success':personalUpdate}">
+							<label for="classStanding">Year:</label>
+							<select id="classStanding" class="form-control" name="classStanding">
+								<option value="Freshman">Freshman</option>
+								<option value="Sophomore">Sophomore</option>
+								<option value="Junior">Junior</option>
+								<option value="Senior">Senior</option>
+								<option value="Super Senior">Super Senior</option>
+							</select>
+						</div>
+						<div class="form-group" ng-class="{'has-success':personalUpdate}">
+							<label for="hometown">Hometown:</label>
+							<input type="text" id="hometown" class="form-control" name="hometown">
+						</div>
+						<div class="form-group" ng-class="{'has-success':personalUpdate}">
+							<label for="fact">Interesting Fact:</label>
+							<textarea id="fact" class="form-control" name="fact"></textarea>
+						</div>
                         <button type="submit" class="btn btn-primary btn-block btn-flat">Sign up</button>
                     </form>
                 </div>
