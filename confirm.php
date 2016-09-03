@@ -1,8 +1,9 @@
 <?php
-    include "rwgistrationResources.php";    
+    include "registrationResources.php";    
 
     // addToBasecamp('/projects/9793820/accesses.json', $_POST['mail']);
-    registerPersonal();
+    registerPersonal($_POST['mail']);
+    email('mlanden@umbc.edu', "test", 'WelcomeMessage.txt');
 ?>
 <!DOCTYPE html>
 <html >
