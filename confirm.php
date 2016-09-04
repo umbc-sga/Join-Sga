@@ -1,9 +1,10 @@
 <?php
     include "registrationResources.php";    
 
-    // addToBasecamp('/projects/9793820/accesses.json', $_POST['mail']);
+    addToBasecamp('/projects/9793820/accesses.json', $_POST['mail']);
     registerPersonal($_POST['mail']);
-    email('mlanden@umbc.edu', "test", 'WelcomeMessage.txt');
+    slackAdd($_POST['mail']);
+    emails($_POST['mail'], "Welcome to SGA!", 'WelcomeMessage.txt');
 ?>
 <!DOCTYPE html>
 <html >

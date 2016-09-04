@@ -91,8 +91,16 @@
                     <p class="login-box-msg">Sign up for SGA!</p>
                     <form action="confirm.php" method="post">
                         <div class="form-group">
+                            <label for="first-name"> First Name:</label>
+                            <input type="text" class="form-control" id="first-name" name="first-name" value="<?php echo $_SERVER['givenName'];?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name"> Last Name:</label>
+                            <input type="text" class="form-control" id="last-name" name="last-name" value="<?php echo $_SERVER['sn'];?>" readonly>
+                        </div>
+                        <div class="form-group">
                         	<label for="preferedName">Prefered name:</label>
-                        	<input id="preferedName" type="text" name="name" class="form-control">
+                        	<input id="preferedName" type="text" name="preferedName" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="mail"> UMBC E-mail:</label>
